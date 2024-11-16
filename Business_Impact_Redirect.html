@@ -11,25 +11,35 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            color: #333;
+            color: white;
             text-align: center;
             padding: 2rem;
         }
 
         header {
-            background-color: #0073e6;
+            background-color: rgb(109, 142, 248);
             color: white;
             padding: 1rem 0;
+            margin-left: -0.5in;
+            margin-right: -0.5in;
+            width: calc(100% + 1in);
         }
 
         footer {
-            background: #222;
+            background:  rgb(109, 142, 248);
             color: white;
             text-align: center;
-            padding: 1rem 0;
             position: fixed;
             bottom: 0;
-            width: 100%;
+            left: -0.5in;
+            width: calc(100% + 1in);
+            padding: 1.5rem 0;
+            font-size: 1.1rem;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .content {
@@ -41,7 +51,7 @@
 
         .back-link {
             display: inline-block;
-            background-color: #0073e6;
+            background-color: rgb(109, 142, 248);
             color: white;
             padding: 0.75rem 1.5rem;
             margin-top: 1rem;
@@ -50,7 +60,7 @@
         }
 
         .back-link:hover {
-            background-color: #005bb5;
+            background-color: rgb(109, 142, 248);
         }
     </style>
 </head>
@@ -62,14 +72,12 @@
 
     <div class="content">
         <p>Discover how AI is revolutionizing industries, improving efficiencies, and creating new business opportunities.</p>
-        <p>This page will redirect to the homepage in 5 seconds.</p>
 
         <a href="index.html" class="back-link">Back to Homepage</a>
     </div>
 
     <footer>
         <p>&copy; 2024 AI and Technology Insights. All Rights Reserved.</p>
-        <p><a href="privacy.html" style="color: #bbb;">Privacy Policy</a> | <a href="contact.html" style="color: #bbb;">Contact Us</a></p>
     </footer>
 </body>
 

@@ -4,32 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type= "text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
     <title>Future Outlook - Redirect</title>
     <meta name="description" content="Discover the impact of emerging AI technologies on society and industries.">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            color: #333;
+            color: white;
             text-align: center;
             padding: 2rem;
         }
 
         header {
-            background-color: #0073e6;
+            background-color: rgb(109, 142, 248);
             color: white;
             padding: 1rem 0;
+            margin-left: -0.5in;
+            margin-right: -0.5in;
+            width: calc(100% + 1in);
         }
 
         footer {
-            background: #222;
+            background:  rgb(109, 142, 248);
             color: white;
             text-align: center;
-            padding: 1rem 0;
             position: fixed;
             bottom: 0;
-            width: 100%;
+            left: -0.5in;
+            width: calc(100% + 1in);
+            padding: 1.5rem 0;
+            font-size: 1.1rem;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .content {
@@ -41,7 +51,8 @@
 
         .back-link {
             display: inline-block;
-            background-color: #0073e6;
+            background-color: rgb(109, 142, 248)
+;
             color: white;
             padding: 0.75rem 1.5rem;
             margin-top: 1rem;
@@ -50,7 +61,23 @@
         }
 
         .back-link:hover {
-            background-color: #005bb5;
+            background-color: rgb(109, 142, 248);
+        }
+
+        .image-middle-top-right {
+            position: absolute;
+            top: 30%;
+            right: 5%;
+            width: 150px;
+            height: auto;
+        }
+
+        .image-bottom-middle-left {
+            position: absolute;
+            bottom: 20%;
+            left: 5%;
+            width: 150px;
+            height: auto;
         }
     </style>
 </head>
@@ -66,6 +93,10 @@
 
         <a href="index.html" class="back-link" aria-label="Back to Homepage">Back to Homepage</a>
     </div>
+
+    <!-- Images -->
+    <img src="image1.jpg" alt="Middle Top Right Image" class="image-middle-top-right">
+    <img src="image2.jpg" alt="Bottom Middle Left Image" class="image-bottom-middle-left">
 
     <footer>
         <p>&copy; 2024 AI and Technology Insights. All Rights Reserved.</p>

@@ -2,3 +2,9 @@ body {
     background-color: black;
     color: white;
 }
+Header {
+background-color: black;
+}
+section-link:hover {
+background-color: rgb(109, 142, 248);
+}
