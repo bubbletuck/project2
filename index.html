@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AI and Technology in Everyday Life">
     <link type= "text/css" rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>AI in Everyday Life</title>
     <style>
         body {
@@ -13,6 +14,13 @@
             margin: 0;
             padding: 0;
             color: white;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        body.fade-in {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         header {
@@ -72,28 +80,48 @@
         <h1>AI in Everyday Life</h1>
         <p>Explore how AI and technology impact daily life, business, and the future.</p>
     </header>
-
     <section>
-        <h2>Explore the Impact of AI:</h2>
-        <div class="img-container">
-            <a href="Personal_Life_Redirect.html">
-                <img src="https://via.placeholder.com/300" alt="Impact of AI on Personal Life">
-                <p>Personal Life</p>
-            </a>
-            <a href="Business_Impact_Redirect.html">
-                <img src="https://via.placeholder.com/300" alt="Impact of AI on Business">
-                <p>Business Impact</p>
-            </a>
-            <a href="FutureOutlookRedirect.html">
-                <img src="https://via.placeholder.com/300" alt="Future Outlook with AI">
-                <p>Future Outlook</p>
-            </a>
-            <a href="HowItWasMadeRedirect.html">
-                <img src="https://via.placeholder.com/300" alt="How This Page Was Made">
-                <p>How It Was Made</p>
-            </a>
+    <h2>Overview of AI Applications</h2>
+    <div class="overview-container">
+        <div class="overview-item">
+            <h3>Education</h3>
+            <p>AI is transforming education by providing personalized learning experiences, automating administrative tasks, and offering intelligent tutoring systems.</p>
         </div>
-    </section>
+        <div class="overview-item">
+            <h3>Business</h3>
+            <p>In business, AI enhances decision-making, improves customer service through chatbots, and optimizes operations with predictive analytics.</p>
+        </div>
+        <div class="overview-item">
+            <h3>Personal Life</h3>
+            <p>AI impacts personal life through smart home devices, virtual assistants, and personalized recommendations in entertainment and shopping.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section>
+    <h2>Explore the Impact of AI:</h2>
+    <div class="img-container">
+        <a href="Personal_Life_Redirect.html">
+            <img src="https://via.placeholder.com/300" alt="Impact of AI on Personal Life">
+            <p>Personal Life</p>
+        </a>
+        <a href="Business_Impact_Redirect.html">
+            <img src="https://via.placeholder.com/300" alt="Impact of AI on Business">
+            <p>Business Impact</p>
+        </a>
+        <a href="FutureOutlookRedirect.html">
+            <img src="https://via.placeholder.com/300" alt="Future Outlook with AI">
+            <p>Future Outlook</p>
+        </a>
+        <a href="HowItWasMadeRedirect.html">
+            <img src="https://via.placeholder.com/300" alt="How This Page Was Made">
+            <p>How It Was Made</p>
+        </a>
+    </div>
+    <a href="works_cited.html" class="section-link">Works Cited</a>
+</section>
 
     <footer>
         <p>&copy; 2024 AI and Technology Insights. All Rights Reserved.</p>
