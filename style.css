@@ -1,6 +1,7 @@
 body {
     background-color: black;
     color: white;
+    width: 100%;
 }
 Header {
 background-color: black;
@@ -9,6 +10,34 @@ section-link:hover {
 background-color: rgb(109, 142, 248);
 }
 .homeimage {
-width:300px ;
-height:300pxd ;
+width:100% ;
+height:auto;
+}
+
+.works-link-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 5%;
+}
+.works-link-container a:hover{
+   color: aqua;
+}
+.section-link {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(109, 142, 248);
+    text-decoration: none;
+    color: #ffffff;
+}
+.section-button {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(109, 142, 248);
+    text-decoration: none;
+    color: #ffffff;
 }

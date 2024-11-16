@@ -21,7 +21,7 @@
             padding: 1rem 0;
             margin-left: -0.5in;
             margin-right: -0.5in;
-            width: calc(100% + 1in);
+            width: 100%;
         }
 
         footer {
@@ -32,6 +32,7 @@
             bottom: 0;
             left: -0.5in;
             width: calc(100% + 1in);
+            height: 3%;
             padding: 1.5rem 0;
             font-size: 1.1rem;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
@@ -43,31 +44,29 @@
 
         .content {
             display: flex;
-            max-width: 1300px;
+            justify-content: space-between;
+            max-width: 80%;
             margin: auto;
             text-align: left;
             line-height: 2.0;
             gap: 2rem;
             position: relative;
+            padding-bottom: 15%;
         }
 
         .text-content {
+            padding-top: 5%;
             flex: 2;
             margin-right: 0rem;
         }
 
-        .image-container {
+        .img-container {
+            padding-top: 5%;
             flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 0rem;
-            position: absolute;
-            right: 50;
-            top: 50%;
-            transform: translateY(50%);
-            transform: translateX(50%);
+            width: auto; /* Adjust the width as needed */
+            margin-left: 15%; /* Optional: Add some margin to separate it from the text */
         }
- 
+
         .image-container img {
             width: 1px;
             height: 1px;
@@ -80,7 +79,7 @@
             background-color: black;
             color: white;
             text-align: left;
-            font-size: .5rem;
+            font-size: 1rem;
             border-radius: 5px;
         }
 
@@ -96,6 +95,9 @@
 
         .back-link:hover {
             background-color: rgb(109, 142, 248);
+        }
+        p {
+            margin: 0;
         }
     </style>
 </head>
@@ -124,18 +126,20 @@ Tandfonline. (2020). AI in Mental Health.</p>
         </div>
 
         <!-- Image container with text boxes under each image -->
-       <div class="img-container">
+        <div class="col img-container">
+           <div class="row">
             <a href="Personal_Life_Redirect.html">
-                <img class="homeimage" src="https://cdn.discordapp.com/attachments/542452177185275914/1307229643442753586/DALLE_2024-11-15_22.06.42_-_A_compact_minimalistic_collage_of_streaming_service_logos_represented_by_colorful_play_buttons_abstract_shapes_and_simple_symbols_arranged_neatly_.webp?ex=67398bfa&is=67383a7a&hm=3296bb20275367baf297dc18cc4f4d6ae0b084a4c655790f5fb8f29aaee69cc7&" alt="Impact of AI on Personal Life">
+                <img class="homeimage" src="https://cdn.discordapp.com/attachments/542452177185275914/1307229643442753586/DALLE_2024-11-15_22.06.42_-_A_compact_minimalistic_collage_of_streaming_service_logos_represented_by_colorful_play_buttons_abstract_shapes_and_simple_symbols_arranged_neatly_.webp?ex=67398bfa&is=67383a7a&hm=3296bb20275367baf297dc18cc4f4d6ae0b084a4c655790f5fb8f29aaee69cc7&" alt="Impact of AI on Personal Life"></a>
                 <div class="image-text">Most or any streaming servcies you can use today has an algorithem which can dectect which show, music, or posts you enjoy, which is driven by AI to bring fourth your most liked media</div>
             </div>
+              <div class="row">
             <div>
-                <img class="homeimage" src="#" alt="Placeholder Image 2">
+                <img class="homeimage" src="https://cdn.discordapp.com/attachments/542452177185275914/1307238269150564372/DALLE_2024-11-15_22.58.02_-_A_detailed_and_realistic_image_of_the_Apple_Watch_Ultra_2_showcasing_its_titanium_case_and_rugged_design._The_watch_is_displayed_on_a_wooden_table_ou.webp?ex=67399402&is=67384282&hm=98f64dcd4c01924c02c518fbe4a73c7c7b0e5bc1f87b093b419f388835751d59&" alt="Apple watch Ultra">
                 <div class="image-text">Image 2 Description</div>
             </div>
+              </div>
         </div>
-    </div>
-
+        </div>
     <footer>
         <p>&copy; 2024 AI and Technology Insights. All Rights Reserved.</p>
     </footer>
