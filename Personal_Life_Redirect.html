@@ -4,143 +4,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="style.css">
-    <title>Personal Life - Redirect</title>
+    <title>AI in Personal Life</title>
     <style>
+        :root {
+            --primary-color: #4A6FE3;
+            --text-color: #333;
+            --background-color: #f5f7ff;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
-            color: white;
-            text-align: center;
-            padding: 0rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
         }
 
         header {
-            background-color: rgb(109, 142, 248);
+            background: linear-gradient(135deg, var(--primary-color), #6384FF);
             color: white;
-            padding: 1rem 0;
-            margin-left: 0in;
-            margin-right:1in;
-            width: 100%;
+            padding: 2rem 1rem;
+            text-align: center;
         }
 
-        footer {
-            background: rgb(109, 142, 248);
-            color: white;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            left: -0.5in;
-            width: calc(100% + 1in);
-            height: 3%;
-            padding: 1.5rem 0;
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .introtext {
             font-size: 1.1rem;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
         .content {
-            display: flex;
-            justify-content: space-between;
-            max-width: 80%;
-            margin: auto;
-            text-align: left;
-            line-height: 2.0;
-            gap: 2rem;
-            position: relative;
-            padding-bottom: 15%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
         }
 
         .text-content {
-            padding-top: 5%;
-            flex: 2;
-            margin-right: 0rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content p {
+            margin-bottom: 1.5rem;
         }
 
         .img-container {
-            padding-top: 5%;
-            flex: 1;
-            width: auto;
-            margin-left: 15%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
-        .image-container img {
-            width: 1px;
-            height: 1px;
-            background-color: gray;
+        .image-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
         .image-text {
-            width: 100%;
-            padding: 8px;
-            background-color: black;
-            color: white;
-            text-align: left;
-            font-size: 1rem;
-            border-radius: 5px;
+            padding: 1rem;
+            background: white;
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+
+        .references {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 2px solid #eee;
+        }
+
+        .references p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
         }
 
         .back-link {
             display: inline-block;
-            background-color: rgb(109, 142, 248);
+            background-color: var(--primary-color);
             color: white;
             padding: 0.75rem 1.5rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
         }
 
         .back-link:hover {
-            background-color: rgb(109, 142, 248);
+            background-color: #3955B0;
         }
-        p {
-            margin: 0;
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .introtext {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Personal Life - AI in Action</h1>
-        <div class="introtext">Explore how AI is transforming everyday personal life—from smart home devices to personal assistants! Artificial Intelligence (AI) is transforming the way we live, work, and access healthcare. Artificial intelligence (AI) is redefining personal life, offering tools that enhance convenience, improve health, and foster creativity.
+        <div class="header-content">
+            <h1>AI in Personal Life</h1>
+            <div class="introtext">
+                Discover how Artificial Intelligence is revolutionizing everyday living—from smart home automation to personalized health tracking and entertainment recommendations. Learn how AI-powered solutions are creating more convenient, healthier, and more connected lives.
+            </div>
         </div>
     </header>
 
     <div class="content">
         <div class="text-content">
-            <p>The advancement of personal technology has revolutionized daily living, offering solutions that simplify tasks and enhance quality of life. Wearable devices like fitness trackers and smartwatches empower users by providing real-time health data, including heart rate, activity levels, and sleep quality (Kellogg et al., 2021). These innovations foster proactive health management, enabling early detection of issues and promoting healthier lifestyles.
+            <p>The integration of Artificial Intelligence (AI) into personal technology has fundamentally transformed how we approach daily living, offering sophisticated solutions that enhance our quality of life in unprecedented ways. Wearable devices, equipped with advanced AI algorithms, now serve as personal health companions, continuously monitoring vital signs, activity patterns, and sleep quality, enabling users to make informed decisions about their well-being (Kellogg et al., 2021).</p>
 
-Voice-controlled assistants like Siri and Alexa demonstrate the potential of artificial intelligence (AI) in personal environments. They allow users to control devices, manage schedules, and retrieve information with ease, streamlining daily routines (Shukla et al., 2020). Additionally, technologies such as virtual reality (VR) and augmented reality (AR) are making education and entertainment more immersive and interactive, offering users unique experiences that were previously unimaginable (Ghosh et al., 2020).
+            <p>AI-powered virtual assistants have become integral to modern households, demonstrating remarkable capabilities in understanding and responding to user needs. These systems, including popular platforms like Siri and Alexa, offer seamless control over smart home devices, efficient schedule management, and instant access to information, effectively streamlining daily routines (Shukla et al., 2020). The emergence of virtual reality (VR) and augmented reality (AR) technologies, enhanced by AI, has revolutionized both educational experiences and entertainment possibilities, creating immersive environments that blur the lines between digital and physical realms (Ghosh et al., 2020).</p>
 
-However, these conveniences bring challenges, especially concerning data security and ethical AI deployment. Sensitive personal data stored on devices can be vulnerable to breaches, raising the need for stringent cybersecurity measures (Chen et al., 2021). Another concern is digital addiction, which can stem from excessive reliance on smart technology. Education on responsible technology use and building secure systems are key to mitigating these risks.
+            <p>However, the widespread adoption of AI-enabled personal technology presents important challenges that require careful consideration. Data privacy and security concerns are paramount, as these devices collect and process sensitive personal information. Implementing robust cybersecurity measures and ensuring transparent data handling practices are crucial steps in protecting user privacy (Chen et al., 2021). Additionally, the potential for digital dependency necessitates thoughtful discussion about maintaining healthy technology boundaries while maximizing the benefits these innovations offer.</p>
 
-In conclusion, personal technology has enriched lives significantly, offering tools for health, productivity, and entertainment. Addressing its ethical and security challenges will ensure these benefits continue sustainably.</p>
-            <h2>References:</h2>
-            <p>- Chen, J., et al. (2021). The intersection of AI and personal data: Opportunities and ethical challenges. IEEE Transactions on Technology and Society, 2 (4), 189–201. Retrieved from [IEEE Explore](https://ieeexplore.ieee.org/abstract/document/8981896).</P>
+            <div class="references">
+                <h2>References</h2>
+                <p>Chen, J., et al. (2021). The intersection of AI and personal data: Opportunities and ethical challenges. IEEE Transactions on Technology and Society, 2(4), 189–201.</p>
+                <p>Shukla, S., et al. (2020). AI in personal assistants: A critical review. IEEE Transactions on Consumer Electronics, 66(3), 1234–1242.</p>
+                <p>Ghosh, R., et al. (2020). VR and AR: Impacts on personal engagement. Journal of Emerging Technologies, 15(2), 347-363.</p>
+            </div>
 
-<p>- Shukla, S., et al. (2020). AI in personal assistants: A critical review. IEEE Transactions on Consumer Electronics, 66(3), 1234–1242. Retrieved from [IEEE Explore](https://ieeexplore.ieee.org/abstract/document/9126102).</p>
-            <p>- Ghosh, R., et al. (2020). VR and AR: Impacts on personal engagement. Journal of Emerging Technologies, 15(2), 347-363. Retrieved from [ACM Digital Library](https://dl.acm.org/doi/full/10.1145/3475799).</p>
             <a href="index.html" class="back-link">Back to Homepage</a>
         </div>
 
-        <div class="col img-container">
-           <div class="row">
-            <a href="Personal_Life_Redirect.html">
-                <img class="homeimage" src="./imgs/stream2.png" alt="Impact of AI on Personal Life">
-            </a>
-                <div class="image-text">Most or any streaming servcies you can use today has an algorithem which can dectect which show, music, or posts you enjoy, which is driven by AI to bring fourth your most liked media</div>
+        <div class="img-container">
+            <div class="image-card">
+                <img src="./imgs/stream2.png" alt="AI-Powered Content Recommendations">
+                <div class="image-text">
+                    Modern streaming services utilize sophisticated AI algorithms to analyze viewing patterns and preferences, delivering personalized content recommendations that enhance user experience and engagement.
+                </div>
             </div>
-              <div class="row">
-            <div>
-                <img class="homeimage" src="./imgs/applewatch2.png" alt="Apple watch Ultra">
-                <div class="image-text">There are many woren devices such as the applewatch, samsung, and fitbit that can track your everyday life actions and suggest health improvemnts through AI.</div>
+            <div class="image-card">
+                <img src="./imgs/applewatch2.png" alt="Smart Wearable Technology">
+                <div class="image-text">
+                    Advanced wearable devices like the Apple Watch incorporate AI to track health metrics, daily activities, and provide personalized health insights, revolutionizing personal wellness monitoring.
+                </div>
             </div>
-              </div>
         </div>
-        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 AI and Technology Insights. All Rights Reserved.</p>
     </footer>

@@ -1,134 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI and Technology in Everyday Life">
-    <link type="text/css" rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <meta name="description" content="Explore how AI and technology impact daily life, business, and the future">
     <title>AI in Everyday Life</title>
     <style>
+        :root {
+            --primary-color: #4A6FE3;
+            --secondary-color: #6C8FF8;
+            --background-color: #F5F7FF;
+            --text-color: #2C3E50;
+            --card-background: #FFFFFF;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             margin: 0;
             padding: 0;
-            color: white;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
             opacity: 0;
             transform: translateY(-20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
 
         body.fade-in {
-            opacity: 2;
-            transform: translateY(10);
+            opacity: 1;
+            transform: translateY(0);
         }
 
         header {
-        background-color: rgb(109, 142, 248);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 1rem 0;
+            padding: 4rem 2rem;
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
         }
 
         section {
-            padding: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto 3rem;
             text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .overview-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .overview-item {
+            background: var(--card-background);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .overview-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .overview-item h3 {
+            color: var(--primary-color);
+            margin-top: 0;
         }
 
         .img-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .img-container img {
-            max-width: 300px;
-            border-radius: 8px;
+        .card {
+            background: var(--card-background);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
         }
 
-        .img-container p {
-            margin: 10px 0 0;
+        .card:hover {
+            transform: translateY(-5px);
         }
 
-        footer {
-            background: rgb(109, 142, 248);
-            color: white;
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card p {
+            padding: 1rem;
+            margin: 0;
+            font-weight: 500;
+            color: var(--primary-color);
             text-align: center;
-            padding: 1rem 0;
+        }
+
+        .works-link-container {
+            text-align: center;
+            margin-top: 4rem;
         }
 
         .section-link {
             display: inline-block;
-            background-color: rgb(109, 142, 248);
-            padding: 0.75rem 1.5rem;
-            margin-top: 1rem;
-            text-decoration: none;
-            border-radius: 5px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-        }
-         .img-container a {
+            padding: 1rem 2rem;
             text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: transform 0.3s ease;
         }
 
-        .img-container a p:hover {
-            color: rgb(89, 122, 215);
+        .section-link:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1rem;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            .overview-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
+</head>
 <body>
     <header>
         <h1>AI in Everyday Life</h1>
-        <p>Explore how AI and technology impact daily life, business, and the future.</p>
+        <p>Explore how AI and technology are reshaping our world, transforming businesses, and defining the future.</p>
     </header>
+
     <section>
-        <p>Welcome to the exciting world of Artificial Intelligence (AI), where the future is unfolding in real time. Imagine a world where your personal space is smarter, your business operates more efficiently, and your everyday tasks are simplified. Whether it's enhancing your personal life with AI-powered gadgets, revolutionizing business practices with automation and data analysis, or looking ahead to the incredible innovations on the horizon, AI is shaping the way we live, work, and interact with the world.</p>
+        <p class="intro-text">Welcome to the exciting world of Artificial Intelligence (AI), where the future is unfolding in real time. Discover how AI is revolutionizing our personal lives, transforming businesses, and shaping the future of technology.</p>
+
         <h2>Overview of AI Applications</h2>
         <div class="overview-container">
             <div class="overview-item">
-                <h3>Future</h3>
-                <p>AI promises to bring even more groundbreaking changes—from autonomous vehicles to advanced medical technologies. The possibilities seem endless as AI evolves, offering a glimpse into a world where technology and human potential work hand in hand.</p>
-            </div>
-            <div class="overview-item">
-                <h3>Business</h3>
-                <p>AI is a game-changer. It helps companies, big and small, optimize operations, improve customer service, and innovate at a faster pace than ever before. This powerful tool is driving economic growth and transforming industries, from retail to healthcare.</p>
-            </div>
-            <div class="overview-item">
                 <h3>Personal Life</h3>
-                <p>AI is already part of our daily routines—from virtual assistants to fitness trackers that monitor our health. It’s all about making life simpler, more personalized, and even healthier.</p>
+                <p>From virtual assistants to health monitoring devices, AI is seamlessly integrating into our daily routines, making life simpler, more personalized, and healthier than ever before.</p>
+            </div>
+            <div class="overview-item">
+                <h3>Business Impact</h3>
+                <p>AI is revolutionizing industries by optimizing operations, enhancing customer experiences, and driving innovation at unprecedented speeds, becoming a cornerstone of modern business strategy.</p>
+            </div>
+            <div class="overview-item">
+                <h3>Future Outlook</h3>
+                <p>The horizon of AI innovation extends from autonomous vehicles to advanced healthcare solutions, promising a future where technology and human potential converge to create extraordinary possibilities.</p>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>Explore the Impact of AI:</h2>
+        <h2>Explore the Impact of AI</h2>
         <div class="img-container">
-            <a href="Personal_Life_Redirect.html">
-                <img src="./imgs/lifeAI.png">
-                <p class="section-button">Personal Life</p>
+            <a href="Personal_Life_Redirect.html" class="card">
+                <img src="/api/placeholder/400/300" alt="AI in Personal Life">
+                <p>Personal Life</p>
             </a>
-            <a href="Business_Impact_Redirect.html">
-                <img src="./imgs/bus2.png" alt="Impact of AI on Business">
-                <p class="section-button">Business Impact</p>
+            <a href="Business_Impact_Redirect.html" class="card">
+                <img src="/api/placeholder/400/300" alt="Impact of AI on Business">
+                <p>Business Impact</p>
             </a>
-            <a href="FutureOutlookRedirect.html">
-                <img src= "./imgs/future2.png" alt="Future Outlook with AI">
-                <p class="section-button">Future Outlook</p>
+            <a href="FutureOutlookRedirect.html" class="card">
+                <img src="/api/placeholder/400/300" alt="Future Outlook with AI">
+                <p>Future Outlook</p>
             </a>
-            <a href="HowItWasMadeRedirect.html">
-                <img src="./imgs/media2.png" alt="How This Page Was Made">
-                <p class="section-button">How It Was Made</p>
+            <a href="HowItWasMadeRedirect.html" class="card">
+                <img src="/api/placeholder/400/300" alt="How This Page Was Made">
+                <p>How It Was Made</p>
             </a>
         </div>
+
         <div class="works-link-container">
             <a href="works_cited.html" class="section-link">Works Cited</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; Billy Chao Incorporated. All Rights Reserved.</p>
+        <p>&copy; 2024 Billy Chao Incorporated. All Rights Reserved.</p>
     </footer>
-</body>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('fade-in');
+        });
+    </script>
+</body>
 </html>

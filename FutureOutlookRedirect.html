@@ -4,115 +4,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="style.css">
-    <title>Future Outlook - Redirect</title>
-    <meta name="description" content="Discover the impact of emerging AI technologies on society and industries.">
+    <meta name="description" content="Explore the future of AI technologies and their impact on healthcare, education, transportation, and society.">
+    <title>The Future of AI - Technology Insights</title>
     <style>
+        :root {
+            --primary-color: #4A6FE3;
+            --secondary-color: #2C3E50;
+            --background-color: #F8FAFC;
+            --card-background: #FFFFFF;
+            --text-color: #2C3E50;
+            --border-radius: 12px;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
-            color: white;
-            text-align: center;
-            padding: 0rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
         }
 
         header {
-            background-color: rgb(109, 142, 248);
+            background: linear-gradient(135deg, var(--primary-color), #6384FF);
             color: white;
-            padding: 1rem 0;
-            margin-left: 0in;
-            margin-right: 1in;
-            width: 100%;
+            padding: 3rem 1rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
 
-        footer {
-            background:  rgb(109, 142, 248);
-            color: white;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            left: -0.5in;
-            width: calc(100% + 1in);
-            padding: 1.5rem 0;
-            font-size: 1.1rem;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .introtext {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            opacity: 0.9;
         }
 
         .content {
-            max-width: 80%;
-            margin: auto;
-            text-align: center;
-            line-height: 2.0;
-            padding-bottom: 15%;
+            max-width: 1200px;
+            margin: -2rem auto 4rem;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 7fr 3fr;
+            gap: 3rem;
             position: relative;
-            gap: 2rem;
-            justify-content: space-between;
-            padding-top: 2%;
         }
-        .text-content {
-            padding-top: 5%;
-            flex: 2;
-            margin-right: 0rem;
+
+        .main-content {
+            background: var(--card-background);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        .future-highlights {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .highlight-card {
+            background: var(--card-background);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .highlight-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: calc(var(--border-radius) - 4px);
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .references {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #eee;
+        }
+
+        .references h2 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .references p {
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
         .back-link {
             display: inline-block;
-            background-color: rgb(109, 142, 248);
+            background-color: var(--primary-color);
             color: white;
             padding: 0.75rem 1.5rem;
-            margin-top: 1rem;
+            margin-top: 2rem;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: var(--border-radius);
+            transition: transform 0.2s, background-color 0.2s;
         }
 
         .back-link:hover {
-            background-color: rgb(109, 142, 248);
+            background-color: #3955B0;
+            transform: translateY(-2px);
         }
 
-        .image-middle-top-right {
-            position: absolute;
-            bottom: 5%;
-            right: 10%;
-            width: 150px;
-            height: auto;
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
         }
 
-        .image-bottom-middle-left {
-            position: absolute;
-            bottom: 5%;
-            left: 10%;
-            width: 150px;
-            height: auto;
+        @media (max-width: 968px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .highlight-card {
+                max-width: 500px;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>The Future of AI</h1>
-        <div class="introtext">Explore how emerging AI technologies will impact the future of society and industries.</div>
+        <div class="header-content">
+            <h1>The Future of AI</h1>
+            <div class="introtext">
+                Discover how emerging AI technologies are reshaping industries, transforming healthcare, revolutionizing education, and creating new possibilities for tomorrow.
+            </div>
+        </div>
     </header>
 
     <div class="content">
-        <p>The future of AI promises even greater innovation and societal impact. One of the most exciting prospects is the role of generative AI in creative and professional fields. These systems can generate original content, from marketing copy and design to scientific research. For example, in advertising, AI could produce entire campaigns tailored to specific audiences, saving time and reducing costs (IEEE, 2022b; ACM, 2021).
-Healthcare is poised for a significant transformation. AI could lead to the development of personalized medicine, where treatments are tailored to an individual's genetic profile. Advanced diagnostic tools could predict illnesses before symptoms appear, allowing for early intervention. In surgery, AI-guided robotic systems could assist surgeons, improving precision and reducing recovery times (Springer, 2021).
-Education will also benefit from AI advancements. Adaptive learning platforms could create fully immersive virtual learning environments, using virtual reality (VR) and augmented reality (AR) to simulate real-world scenarios. These platforms would cater to diverse learning styles, ensuring that education is inclusive and effective (Tandfonline, 2020).
-Autonomous vehicles represent another frontier of AI innovation. Self-driving cars, guided by AI, could revolutionize transportation by reducing traffic accidents, improving fuel efficiency, and lowering emissions. These advancements would contribute to more sustainable urban environments (IEEE, 2019; Springer, 2021). Similarly, in logistics, fully autonomous supply chains could manage everything from inventory to delivery, ensuring speed and efficiency.
-However, these advancements come with ethical challenges. Issues such as data privacy, algorithmic bias, and potential job displacement must be addressed to ensure that AI benefits society equitably. Policymakers and technologists must work together to create regulations that balance innovation with ethical considerations (IEEE, 2019; Tandfonline, 2022).</p>
-        <h2>References:</h2>
-<p>- Morris, T., et al. (2023). Ethical challenges in AI governance. Technology and Ethics Review, 8(1), 56-74.</p>
-<p>- Patel, A., et al. (2021). Personalized learning and AI: Future perspectives.*Education and Technology, 8(2), 98-117.</p>
-        <p>- Rahman, F., et al. (2021). Sustainable urban planning through smart technologies. Environmental Technology Journal, 12(3), 145-160.</p>
-        <p>- Kumar, P., et al. (2022). Ethical considerations in emerging technologies. AI and Society, 7(1), 74-85.</p>
-        <a href="index.html" class="back-link">Back to Homepage</a>
-    </div>
+        <div class="main-content">
+            <div class="section">
+                <h2>Generative AI and Creative Industries</h2>
+                <p>The evolution of generative AI is revolutionizing creative and professional fields, enabling the production of sophisticated content across multiple domains. These systems are advancing beyond basic automation to create nuanced, context-aware content that rivals human creativity in advertising, design, and research applications.</p>
+            </div>
 
-    <!-- Images -->
-    <img src="image1.jpg" alt="Middle Top Right Image" class="image-middle-top-right">
-    <img src="image2.jpg" alt="Bottom Middle Left Image" class="image-bottom-middle-left">
+            <div class="section">
+                <h2>Healthcare Transformation</h2>
+                <p>AI is catalyzing a paradigm shift in healthcare delivery through personalized medicine and predictive diagnostics. By analyzing genetic profiles and historical health data, AI systems are enabling tailored treatment approaches and early disease detection, while AI-assisted surgical systems are enhancing precision and patient outcomes.</p>
+            </div>
+
+            <div class="section">
+                <h2>Educational Innovation</h2>
+                <p>The future of education is being reshaped by AI-powered adaptive learning platforms that create personalized, immersive experiences. Through VR and AR technologies, these systems provide realistic simulations and individualized instruction that accommodates diverse learning styles and needs.</p>
+            </div>
+
+            <div class="section">
+                <h2>Autonomous Systems</h2>
+                <p>The advancement of autonomous vehicles and smart logistics systems presents opportunities for safer, more efficient transportation and supply chain management. These technologies promise reduced accidents, improved environmental sustainability, and optimized resource utilization across urban environments.</p>
+            </div>
+
+            <div class="references">
+                <h2>References</h2>
+                <p>Morris, T., et al. (2023). Ethical challenges in AI governance. Technology and Ethics Review, 8(1), 56-74.</p>
+                <p>Patel, A., et al. (2021). Personalized learning and AI: Future perspectives. Education and Technology, 8(2), 98-117.</p>
+                <p>Rahman, F., et al. (2021). Sustainable urban planning through smart technologies. Environmental Technology Journal, 12(3), 145-160.</p>
+                <p>Kumar, P., et al. (2022). Ethical considerations in emerging technologies. AI and Society, 7(1), 74-85.</p>
+            </div>
+
+            <a href="index.html" class="back-link">Back to Homepage</a>
+        </div>
+
+        <div class="future-highlights">
+            <div class="highlight-card">
+                <img src="/api/placeholder/400/320" alt="AI in Healthcare">
+                <h3>Healthcare Innovation</h3>
+                <p>AI-powered diagnostics and personalized medicine are revolutionizing patient care and treatment outcomes.</p>
+            </div>
+
+            <div class="highlight-card">
+                <img src="/api/placeholder/400/320" alt="AI in Education">
+                <h3>Educational Technologies</h3>
+                <p>Adaptive learning platforms and immersive experiences are transforming how we learn and teach.</p>
+            </div>
+
+            <div class="highlight-card">
+                <img src="/api/placeholder/400/320" alt="Autonomous Systems">
+                <h3>Autonomous Future</h3>
+                <p>Self-driving vehicles and smart logistics are reshaping transportation and urban mobility.</p>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 AI and Technology Insights. All Rights Reserved.</p>
